@@ -3,7 +3,13 @@
 1. Install Anaconda from [its offcicial website](https://docs.anaconda.com/free/anaconda/install/index.html).
 1. Set up your conda env. 
 ```bash
-# Under the same directory as this file
+
+# Under the same directory as this file (engineering_of_ml_systems/pre-materials/docs).
+
+# If running this command on a freshly installed Linux/Ubuntu, ensure
+# the gcc compiler is installed on machine, some pip dependencies are
+# compiled during installation
+
 conda env create -f mlops_eng_environment.yaml # The YAML file located in the same directory as this doc
 
 # Switch to created conda environment
