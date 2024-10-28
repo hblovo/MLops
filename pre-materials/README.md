@@ -47,7 +47,7 @@ The instructions below guide you how to set up the course environment. The instr
 
 ### 1. Configure your local environment
 #### If you're using Linux or macOS...
-You can use your host system to set up your local environment as described [here](./docs/local_env_without_vm.md). (The commands in the instruction are based on Linux, feel free to adapt them to fit your need if you're using macOS.)
+You can use your host system to set up your local environment as described [here](./docs/local_env_without_vm.md). (The commands in the instruction are based on Linux, feel free to adapt them to fit your need if you're using macOS. For example, the version and build strings can be removed and some packages that are are not supported for MacOS need to be removed as well. An example yaml can be found [here](./docs/mlops_env_no_builds.yaml)).
 
 #### If you're using Windows
 - We recommend using a pre-built image to create Ubuntu VM following [this instruction for using VM](./docs/local_env_vm.md).
