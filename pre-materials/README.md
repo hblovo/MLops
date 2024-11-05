@@ -70,7 +70,9 @@ Then follow the instructions in [1_create_vm/openstack.ipynb](./setup/1_create_v
 
 
 ### 3. Install necessary tools and create a K8s cluster in the cPouta VM
-**Note**: In this and and next part, you'll need to run some scripts in your local environment and the remote cPouta VM. In case you get an error when running the scripts, please first check if your issue is covered [here](./docs/Q&A.md#setting-up-the-mlops-platform-in-cpouta). If not, please pose your issue in the Moodle forum. 
+**Note**: In this and and next part, you'll need to run some scripts in your local environment and the remote cPouta VM. In case you get an error when running the scripts, please first check if your issue is covered [here](./docs/Q&A.md#setting-up-the-mlops-platform-in-cpouta). If not, please pose your issue in the Moodle forum or the course's discord channel (preferred).
+
+The Computer Science department's discord server can be joined by following [these instructions](https://github.com/Ohtuproju2021syksy/Discord-Bot-better/blob/main/documentation/usermanual-student.md ), followed by joining the Engineering of Machine Learning Systems (MLOPs) course by following [this link](https://study.cs.helsinki.fi/discord/join/mlops) or using the /join discord command.
 
 You will use some Ansible scripts to create a K8s cluster in your VM. Simply speaking, Ansible is a tool for running commands/scripts in remote machines from your local machine. 
 
