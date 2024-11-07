@@ -109,3 +109,24 @@ ipython kernel install --user --name=mlops_eng
 jupyter notebook
 ```
 ![Selecting different kernels in jupyter session](./images/running_jupyternotebook_natively.png)
+
+## A false positive environment setup.
+
+Installation of some pip dependencies may fail while all conda
+dependencies succeed.
+
+This occurs when setting up the environment using the environment
+setup command `conda env create -f mlops_eng_environment.yaml`. In
+this case, the mlops_eng conda environment will appear under the
+available conda envs. The problem with this environment manifests
+later on when trying to import the pip based missing packages.
+
+Installation of pip-based dependencies were observed to fail due to a
+missing gcc compiler which is required to compile the packages at
+installation time.
+
+When/Why would the compiler tools be missing? Mainly when working with
+a new OS installation, such as an Ubuntu installation in a Virtual
+Machine in a Windows computer or any circumstance that results in a
+new VM installation. The solution is to ensure the gcc compiler tools
+are installed.
