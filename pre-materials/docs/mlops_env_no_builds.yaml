@@ -3,7 +3,6 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - _libgcc_mutex
   - blas
   - brotli-python
   - bzip2
@@ -29,7 +28,6 @@ dependencies:
   - ld_impl_linux-64
   - libexpat
   - libffi
-  - libgfortran-ng
   - libgfortran5
   - libglib
   - libiconv
@@ -53,7 +51,7 @@ dependencies:
   - pycparser
   - pyproject_hooks
   - pysocks
-  - python
+  - python # can specify to older versions (e.g., 3.11) if version compatibility issues are met.
   - python-build
   - python-fastjsonschema
   - python-installer
@@ -282,4 +280,3 @@ dependencies:
       - xgboost
       - yarl
       - zipp
-
