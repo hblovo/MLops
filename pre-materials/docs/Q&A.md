@@ -83,5 +83,29 @@ FLOATING_IP grafana-server.local
 ```
 where FLOATING_IP should be the floating IP of your cPouta VM. 
 
+## Challenges in running Jupyter Notebook from VSCode (MacOS Users)
 
+VSCode has been seen to crash or hang when running Jupyter Notebooks
+in some MacOS versions. We can resolve this by running Jupyter
+natively.
 
+- Ensure jupyter is installed in the mlops_eng environment
+
+```
+conda list | grep jupyter
+```
+- Ensure ipython kernel is installed, we need it to register the virtual environment to Jupyter
+```
+conda list | grep ipykernel
+```
+
+-If those two are installed, register the mlops_eng environment to Jupyter Notebooks
+```
+ipython kernel install --user --name=mlops_eng
+```
+
+- Start a Jupyter Notebook Session at the top directory and navigate to the notebook you would like to open and activate the mlops_eng environment as shown in the image below.
+```
+jupyter notebook
+```
+![Selecting different kernels in jupyter session](./images/running_jupyternotebook_natively.png)
