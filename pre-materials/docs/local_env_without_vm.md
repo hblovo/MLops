@@ -21,6 +21,13 @@ python3 -m pip install --user ansible
 
 5. Install [kubectl (version 1.27.0)](https://kubernetes.io/docs/tasks/tools/#kubectl), which is the tool used to communicate with the K8s cluster.
 
+For snap users, e.g. on Ubuntu, it's just:
+```
+snap install kubectl --classic
+kubectl version --client
+```
+
+
 6. Install jq (for processing JSON) and hey (for generating HTTP loads). These tools will be used later in the course.
 ```bash
 sudo apt install hey jq
