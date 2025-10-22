@@ -2,6 +2,7 @@
 * Before getting started
     * [An overview of the course environment](#an-overview-of-the-course-environment)
     * [Apply access to CSC](#apply-access-to-csc)
+    * [Computer requirements](#computer-requirements)
 * [Set up the course environment](#set-up-the-course-environment)
     * [Configure your local environment](#1-configure-your-local-environment)
     * [Create a VM in cPouta](#2-create-a-vm-in-cpouta)
@@ -37,6 +38,19 @@ Please note the following:
 - After you get the confirmation that you have been added to the CSC project used by the course, Please go to [https://my.csc.fi](https://my.csc.fi/dashboard) -> Click "Projects" in the left panel -> Click the "Engineering of ML systems course" project -> Agree to the general terms & conditions of cPouta as shown below.
 <img src="./docs/images/cpouta-terms.png" width=300 />
 
+## Computer requirements
+
+The course exerices assume that you have a computer with atleast the following:
+- 8 CPUs
+- 16GB RAM
+- 100GB of free diskpace
+- Ethernet cable
+
+**The course was originally designed for Ubuntu 22.04**, which causes different dependency problems for other operating systems. **Our recommendation is for all students to create a virtual machine using virtualbox with a provided frozen image of Ubuntu 22.04 (people with the same operating system included)** to reduce the amount of unknown variables created by multiple operating systems. Other ways of setup can make **you to do more manual setup work than actual exercise work later down the line**, as: 
+- Teaching assistants don't have access to multiple computers with different operating systems
+- It is time consuming and sometimes impossible to replicate your unique computer configuration 
+- Small monthly changes in different operating system ecosystems can easily break used depedencies 
+- Changes in the used depedencies already create different maintance challenges for the exercises
 
 ## Set up the course environment
 **Warning**: It may take up to a few hours to finish the environment setup, so remember to reserve enough time for this part. 
@@ -46,13 +60,13 @@ Please note the following:
 The instructions below guide you how to set up the course environment. The instructions are based on Linux operating system. 
 
 ### 1. Configure your local environment
-#### If you're using Linux or macOS...
-You can use your host system to set up your local environment as described [here](./docs/local_env_without_vm.md). (The commands in the instruction are based on Linux, feel free to adapt them to fit your need if you're using macOS. For example, the version and build strings can be removed and some packages that are are not supported for MacOS need to be removed as well. An example yaml can be found [here](./docs/mlops_env_no_builds.yaml)).
 
-#### If you're using Windows
-- We recommend using a pre-built image to create Ubuntu VM following [this instruction for using VM](./docs/local_env_vm.md).
-- You can install WSL and then follow the [same instruction](./docs/local_env_without_vm.md) for Linux/maxOS users above.
+#### The easiest option
+We recommend using a pre-built image to create Ubuntu 22.04 VM following [this instruction for using VM](./docs/local_env_vm.md).
 
+#### The challenging options (We do not provide technical support for these options)
+- If you're using **Linux or MacOS**, you can use your host system to set up your local environment as described [here](./docs/local_env_without_vm.md). (The commands in the instruction are based on Linux, feel free to adapt them to fit your needs if you're using macOS. For example, the version and build strings can be removed and some packages that are not supported for MacOS need to be removed as well. An example yaml can be found [here](./docs/mlops_env_no_builds.yaml)). 
+- If you use **Windows**, you can install WSL and then follow the [same instruction](./docs/local_env_without_vm.md) for Linux/maxOS users above.
 
 ### 2. Create a VM in cPouta
 Now, it is time to start set up the remote MLOps platform. In the instructions below, you will need to run some commands in a terminal. You should run them in your local environment unless separately specified.
