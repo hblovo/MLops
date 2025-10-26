@@ -18,8 +18,8 @@ The figure below illustrates the course environment:
 ![](./docs/images/course_env.jpg)
 
 From a high level, the course environment consists of two parts:
-1) An MLOps platform deployed to a Kubernetes cluster running in a remote virtual machine (VM).
-2) A local environment with necessary packages installed for communicating with the remote MLOps platform.
+1) An MLOps platform deployed to a Kubernetes cluster running in a remote (cPouta/CSC hosted) virtual machine (VM).
+2) A local virtual machine where the local environment with necessary packages installed for communicating with the remote MLOps platform.
 
 First, let's take a glance at Kubernetes, or shortly, K8s (as there are 8 characters between "K" and "s"). K8s is a commonly used technique to deploy and manage containers. If the concept of container is new, you can see it as a "lightweight VM" that contains everything to run an application, including the code, libraries, dependencies, and runtime environment. If we go back to the above figure of the course environment, the MLOps platform actually consists of multiple containers:
 
