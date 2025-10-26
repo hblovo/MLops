@@ -28,6 +28,9 @@ If your screen starts flickering, try resizing your virtual screen to a larger r
 
 <img src="./images/reset_screen_resolution.png" >
 
+!! DO NOT UPGRADE THE INSTALLED GUEST OS (UBUNTU OS 22.04) when prompted. This is to ensure continued compatibility with existing tools in the conda yaml.
+
+
 ### 3. Log in to the virtual machine
 Now, you can log in to your VM. The username is "**user**" and the password for admin privilege is "**password**". 
 
@@ -35,13 +38,24 @@ Now, you can log in to your VM. The username is "**user**" and the password for 
 
 ### 4. Download the course repository
 ---
-
 In your VM, open a terminal (ctrl+alt+t) and run the following command to download the course repository:
 ```bash
 git clone git@version.helsinki.fi:mlops/engineering_of_ml_systems.git # cloning with ssh
 
 git clone https://version.helsinki.fi/mlops/engineering_of_ml_systems.git # cloning with https
 # You will be asked to enter a username and password, these are your university credentials. 
+```
+
+Prior to installing the packages, ensure that the gcc compiler is available
+
+```
+gcc --version
+```
+If the gcc compiler is not available, install it since it is required by the pip installer when setting up the conda environment.
+
+```
+sudo apt update
+sudo apt install gcc
 ```
 
 Set up your conda env. 
