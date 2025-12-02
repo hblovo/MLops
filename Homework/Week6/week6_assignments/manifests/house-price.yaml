@@ -1,0 +1,15 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  annotations:
+    prometheus.io/scrape: 'true'
+  name: house-price
+  namespace: kserve-inference
+spec:
+  predictor:
+    model:
+      modelFormat:
+        name: mlflow
+      protocolVersion: v2
+      storageUri: s3://mlflow/4/7a5a55829c1b4934a1e6f43ab649d435/artifacts/lgbm-house
+    serviceAccountName: kserve-sa
