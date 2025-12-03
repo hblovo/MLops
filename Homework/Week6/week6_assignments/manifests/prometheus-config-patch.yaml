@@ -14,7 +14,10 @@ data:
 
       - alert: 4xxResponses
         ### BEGIN ALERTING RULE
-
+        expr: increase(revision_app_request_count{namespace_name="kserve-inference", isvc_name="house-price", response_code_class="4xx"}[1m]) > 10
+        for: 0s
+        labels:
+          severity: critical
         ### END ALERTING RULE
         annotations:
           summary: The house-price inference service has returned too many 4xx responses
